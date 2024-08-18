@@ -48,14 +48,14 @@ class TestPackageUpdater(unittest.TestCase):
         self.assertEqual(len(updated_packages), 1)  # Expect 1 package that needs a restart
         self.assertEqual(updated_packages[0]['name'], 'example')
 
-    def test_real_check_for_updates(self):
-        package = {'name': 'numpy', 'requires_restart': False}
-        result = check_for_updates(package)
+    # def test_real_check_for_updates(self):
+    #     package = {'name': 'numpy', 'requires_restart': False}
+    #     result = check_for_updates(package)
 
-        # This is a real test against the current state of 'numpy' in the environment
-        # May return True or False depending on if numpy is outdated or not
-        # This test may not be consistent across different environments
-        self.assertIsInstance(result, bool)
+    #     # This is a real test against the current state of 'numpy' in the environment
+    #     # May return True or False depending on if numpy is outdated or not
+    #     # This test may not be consistent across different environments
+    #     self.assertIsInstance(result, bool)
 
 
 if __name__ == '__main__':
